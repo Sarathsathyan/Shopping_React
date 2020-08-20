@@ -54,7 +54,7 @@ const Navbar =props =>{
                                                     <li><a href="Catagori.html">Catagori</a></li>
                                                     <li className="hot"><a href="#">Latest</a>
                                                         <ul className="submenu">
-                                                            <li><a href="product_list.html"> Product list</a></li>
+                                                            <li><Router><Link to={'/productList'}>Product List</Link></Router></li>
                                                             <li><a href="single-product.html"> Product Details</a></li>
                                                         </ul>
                                                     </li>

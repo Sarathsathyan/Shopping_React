@@ -12,6 +12,10 @@ import Section_category from "./Pages/section_category";
 import Login from "./Pages/login";
 import Registration from "./Pages/registration";
 import Contact from "./Pages/contact";
+import ProductList from "./Pages/productList";
+
+import {connect} from 'react-redux'
+
 class App extends Component {
   render() {
     return(
@@ -51,7 +55,15 @@ class App extends Component {
 
                             </Contact>
                         </Route>
-                        <Route exact path='/register' component={Registration}></Route>
+                        <Route exact path='/productList'>
+                            <ProductList>
+
+                            </ProductList>
+                        </Route>
+
+                        <Route exact path='/register' component={Registration}>
+
+                        </Route>
 
                         <Redirect to={'/'}></Redirect>
 
@@ -63,7 +75,9 @@ class App extends Component {
             <main>
 
 
-                <Section_category></Section_category>
+                <Section_category>
+
+                </Section_category>
 
 
             </main>
@@ -80,4 +94,4 @@ class App extends Component {
 
 }
 
-export default App;
+export default connect() (App);
